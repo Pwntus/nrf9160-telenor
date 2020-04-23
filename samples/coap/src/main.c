@@ -51,8 +51,8 @@ void main() {
 		.sin_family = AF_INET,
 		.sin_port = htons(5683),
 	};
-	net_addr_pton(AF_INET, "172.16.15.14", &remote_addr.sin_addr);
-	u8_t *msg = "Hello!";
+	net_addr_pton(AF_INET, "172.32.16.1", &remote_addr.sin_addr);
+	u8_t *msg = "Wallah dette er helt sykt, shamener?";
 	const char * const path[] = { "straight", "and", "narrow", NULL };
 	int ret = coap_endpoint_post(coap, (struct sockaddr *)&remote_addr, sizeof(remote_addr), path, msg, strlen(msg));
 	if (ret != COAP_RESPONSE_CODE_CREATED) {
