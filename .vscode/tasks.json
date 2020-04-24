@@ -10,6 +10,16 @@
 
     "tasks": [
         {
+            "label": "build coap",
+            "args": [
+                "build",
+                "-p",
+                "auto",
+                "samples/coap"
+            ],
+            "problemMatcher": []
+        },
+        {
             "label": "build hello_world",
             "args": [
                 "build",
